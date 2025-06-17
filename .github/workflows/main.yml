@@ -27,7 +27,7 @@ jobs:
 
       - name: Set image name
         id: metadata
-        run: echo "IMAGE_NAME=ghcr.io/${{ github.repository }}" >> $GITHUB_ENV
+        run: echo "IMAGE_NAME=ghcr.io/lefooc/test" >> $GITHUB_ENV
 
       - name: Build Docker image
         run: docker build -t $IMAGE_NAME:latest -f helloserver/Dockerfile .
